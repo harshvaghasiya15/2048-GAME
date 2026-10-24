@@ -8,6 +8,7 @@
 // Section 6: Game flow      (from main.py)
 // Section 7: Controls       (replaces input() in main.py)
 // Section 8: Start the game
+// Section 9: Offline / install support
 // ============================================================
 
 
@@ -466,4 +467,16 @@ if (savedData) {
   restoreGame(savedData);
 } else {
   startNewGame();
+}
+
+
+// ============================================================
+// 9. OFFLINE / INSTALL SUPPORT
+// ============================================================
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("service-worker.js")
+      .catch((error) => console.error("Service worker failed:", error));
+  });
 }
