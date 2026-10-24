@@ -4,9 +4,7 @@ A browser version of the classic number-merging puzzle. Slide the tiles, merge m
 
 **Play it here:** https://harshvaghasiya15.github.io/2048-GAME/
 
-
 ![2048 gameplay](screenshots/gameplay.png)
-
 
 ## Features
 
@@ -14,6 +12,7 @@ A browser version of the classic number-merging puzzle. Slide the tiles, merge m
 - Score and best score, with the best score saved between visits
 - Your current game is saved automatically, so you can close the tab and continue later
 - Works on computers and phones
+- Installable as an app on phones and computers, and works offline
 - "Keep Going" option after reaching 2048
 - Pop-up "How to play" guide
 
@@ -29,12 +28,24 @@ A browser version of the classic number-merging puzzle. Slide the tiles, merge m
 
 No installation is needed. Download or clone this repository and open `index.html` in any modern browser.
 
+## Install as an app
+
+The game can be installed like a normal app, with its own icon and window. It works offline after the first visit.
+
+- **Android (Chrome):** open the game link, tap the **⋮ menu**, then **Install app** or **Add to Home screen**.
+- **iPhone (Safari):** open the game link, tap the **Share** button, then **Add to Home Screen**.
+- **Laptop (Chrome or Edge):** click the install icon at the right end of the address bar, then **Install**.
+
 ## Project structure
 
 ```
 ├── index.html            Page structure
 ├── style.css             Layout, colors, and animations
 ├── script.js             Game logic and controls
+├── manifest.json         App name, colors, and icons for installing
+├── service-worker.js     Makes the game work offline
+├── icons/                App icons
+├── screenshots/          Images used in this README
 └── terminal-version/     Original Python version
 ```
 
